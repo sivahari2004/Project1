@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Together - Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-image: url('https://wallpaperaccess.com/full/1431622.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .login-container {
+      position: relative;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 40px 30px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 400px;
+    }
+
+    .login-container img.logo {
+      width: 170px;
+      margin-bottom: 1px;
+    }
+
+    .login-container h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 93%;
+      padding: 15px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      background-color: #f8f8f8;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 15px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-container button:hover {
+      background-color: #0056b3;
+    }
+
+    .signup-link {
+      margin-top: 15px;
+      color: #007BFF;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .signup-link a {
+      text-decoration: none;
+      color: #007BFF;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  
+  <div class="login-container">
+    <img src="https://www.creativefabrica.com/wp-content/uploads/2021/03/20/Travel-logo-design-Graphics-9786083-1.jpg" alt="Travel Together Logo" class="logo">
+    <h2>Let's Travel Together</h2>
+    
+    <!-- Login Form -->
+    <form id="loginForm" onsubmit="return validateLogin(event)">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+      <button type="submit">Login</button>
+    </form>
+    
+    <p class="signup-link">Don't have an account? <a href="signup.html">Sign up here</a></p>
+  </div>
+
+  <script>
+    function validateLogin(event) {
+      event.preventDefault();
+
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // Check if the entered credentials match the required ones
+      if (username === "sivahari" && password === "sivahari") {
+        // Redirect to success page if credentials are correct
+        window.location.href = 'login-success.html';
+      } else {
+        // If credentials don't match, show access denied page
+        window.location.href = 'access-denied.html';
+      }
+    }
+  </script>
+</body>
+</html>
+
