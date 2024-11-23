@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Together - View Plans</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-image: url('https://wallpaperaccess.com/full/1881714.jpg'); /* Your background image URL */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      overflow-y: auto;
+      transition: background-color 0.5s ease-in-out;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align:center;
+      font-size: 45px;
+      font-weight: 700;
+      margin-bottom: 50px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .plans-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      justify-items: center;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-bottom: 50px;
+      overflow-y: scroll;
+    }
+
+    .plan-card {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 300px;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .plan-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
+    }
+
+    .plan-card h3 {
+      font-size: 30px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .plan-card p {
+      font-size: 16px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .view-more-btn {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease-in-out;
+    }
+
+    .view-more-btn:hover {
+      background-color: #0056b3;
+      transform: scale(1.1);
+    }
+
+    .back-btn {
+      margin-top: 40px;
+      font-size: 18px;
+      color: #007BFF;
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .back-btn:hover {
+      color: #0056b3;
+    }
+
+    /* Scroll styling */
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #007BFF;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #0056b3;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h2>Travel Plans</h2>
+
+  <!-- Plans Container -->
+  <div class="plans-container">
+
+    <!-- Plan 1 -->
+    <div class="plan-card">
+      <h3>European Adventure</h3>
+      <p>Explore the most iconic destinations in Europe, from Paris to Rome, with guided tours and exclusive experiences.</p>
+      <button class="view-more-btn" onclick="viewPlanDetails(1)">View More</button>
+    </div>
+
+    <!-- Plan 2 -->
+    <div class="plan-card">
+      <h3>Asian Odyssey</h3>
+      <p>Discover the rich cultures of Asia with visits to Tokyo, Bangkok, and Bali. A trip that will leave you awestruck.</p>
+      <button class="view-more-btn" onclick="viewPlanDetails(2)">View More</button>
+    </div>
+
+    <!-- Plan 3 -->
+    <div class="plan-card">
+      <h3>USA Road Trip</h3>
+      <p>Embark on an unforgettable cross-country road trip across the United States, from California to New York.</p>
+      <button class="view-more-btn" onclick="viewPlanDetails(3)">View More</button>
+    </div>
+
+    <!-- Plan 4 -->
+    <div class="plan-card">
+      <h3>South American Escapade</h3>
+      <p>Venture into the heart of South America, from the beaches of Brazil to the Andes mountains.</p>
+      <button class="view-more-btn" onclick="viewPlanDetails(4)">View More</button>
+    </div>
+
+    <!-- Plan 5 -->
+    <div class="plan-card">
+      <h3>Africa Safari</h3>
+      <p>Experience the adventure of a lifetime with an African safari, featuring wildlife excursions in Kenya and South Africa.</p>
+      <button class="view-more-btn" onclick="viewPlanDetails(5)">View More</button>
+    </div>
+
+    <!-- Plan 6 -->
+    <div class="plan-card">
+      <h3>Island Hopping in the Philippines</h3>
+      <p>Explore the breathtaking beaches and islands of the Philippines, with tropical getaways and water activities.</p>
+      <button class="view-more-btn" onclick="viewPlanDetails(6)">View More</button>
+    </div>
+
+    <!-- Plan 7 -->
+    <div class="plan-card">
+      <h3>Australia & New Zealand Adventure</h3>
+      <p>Travel through the scenic landscapes of Australia and New Zealand, with excursions to the Great Barrier Reef and Auckland.</p>
+      <button class="view-more-btn" onclick="viewPlanDetails(7)">View More</button>
+    </div>
+
+    <!-- Plan 8 -->
+    <div class="plan-card">
+      <h3>European Food Tour</h3>
+      <p>Indulge in culinary delights across Europe, from Parisian pastries to Italian pasta, in a food-focused travel experience.</p>
+      <button class="view-more-btn" onclick="viewPlanDetails(8)">View More</button>
+    </div>
+
+    <!-- Plan 9 -->
+    <div class="plan-card">
+      <h3>Japan Cultural Journey</h3>
+      <p>Explore the unique culture of Japan with visits to Kyoto’s temples, Tokyo’s modern landmarks, and a visit to Mount Fuji.</p>
+      <button class="view-more-btn" onclick="viewPlanDetails(9)">View More</button>
+    </div>
+
+    <!-- Plan 10 -->
+    <div class="plan-card">
+      <h3>Antarctic Expedition</h3>
+      <p>Join a once-in-a-lifetime expedition to the icy continent of Antarctica, exploring glaciers, wildlife, and breathtaking landscapes.</p>
+      <button class="view-more-btn" onclick="viewPlanDetails(10)">View More</button>
+    </div>
+
+  </div>
+
+  <!-- Back Button -->
+  <a href="dashboard.html" class="back-btn">Back to Dashboard</a>
+
+  <script>
+    function viewPlanDetails(planId) {
+      alert("View details for Plan " + planId);
+      // You can replace this with an actual page or modal to display more details
+    }
+  </script>
+
+</body>
+</html>
