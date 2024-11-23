@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Together - View Friends</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 90%;
+      background-image: url('https://wallpaperaccess.com/full/1881714.jpg'); /* Replace with your background image */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 120px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 45px;
+      font-weight: 700;
+      margin-bottom: 100px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .friends-container {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .friend-card {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 300px;
+      margin: 10px auto;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .friend-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
+    }
+
+    .friend-card h3 {
+      font-size: 25px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .friend-card p {
+      font-size: 18px;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    /* No friends found box */
+    .no-friends-message {
+      font-size: 22px;
+      color: #ff6f61;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      max-width: 600px;
+    }
+
+    .back-btn {
+      margin-top: 40px;
+      font-size: 18px;
+      color: #007BFF;
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .back-btn:hover {
+      color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Friends List</h2>
+
+  <!-- Friends Container -->
+  <div class="friends-container">
+    
+    <!-- Display message if no friends -->
+    <div class="no-friends-message">
+      <p>No friends found. Start connecting with people!</p>
+    </div>
+
+    <!-- Friend 1 Example -->
+    <!-- Uncomment and duplicate for more friends -->
+    <!--
+    <div class="friend-card">
+      <h3>John Doe</h3>
+      <p>Travel Enthusiast. Loves exploring new destinations!</p>
+    </div>
+    -->
+
+    <!-- Friend 2 Example -->
+    <!--
+    <div class="friend-card">
+      <h3>Jane Smith</h3>
+      <p>Adventure Seeker. Always ready for a challenge!</p>
+    </div>
+    -->
+
+  </div>
+
+  <!-- Back Button -->
+  <a href="dashboard.html" class="back-btn">Back to Dashboard</a>
+
+</body>
+</html>
