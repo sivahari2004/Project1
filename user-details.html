@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Together - Enter Your Details</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-image: url('https://wallpaperaccess.com/full/1881714.jpg'); /* Same background as other pages */
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      overflow: hidden;
+      transition: background-color 0.5s ease-in-out;
+    }
+
+    .form-container {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      width: 90%;
+      max-width: 600px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .form-container h2 {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    label {
+      font-size: 18px;
+      display: block;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    input[type="text"], input[type="email"], input[type="date"], select {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f8f8f8;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 15px 30px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+      transform: scale(1.1);
+    }
+
+    .back-btn {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #007BFF;
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .back-btn:hover {
+      color: #0056b3;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Enter Your Details</h2>
+
+    <!-- User Details Form -->
+    <form id="userDetailsForm" action="#" method="POST">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label for="preferences">Travel Preferences:</label>
+      <select id="preferences" name="preferences">
+        <option value="solo">Solo Travel</option>
+        <option value="group">Group Travel</option>
+        <option value="couple">Couple Travel</option>
+        <option value="family">Family Travel</option>
+      </select>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Back Button -->
+    <a href="dashboard.html" class="back-btn">Back to Dashboard</a>
+  </div>
+
+</body>
+</html>
