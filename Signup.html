@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Travel Together</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <div class="signup-container">
+    <h2>Create New Account</h2>
+    <form id="signupForm" onsubmit="return registerUser()">
+      <label for="newUsername">Username:</label>
+      <input type="text" id="newUsername" name="newUsername" placeholder="Enter your username" required>
+
+      <label for="newPassword">Password:</label>
+      <input type="password" id="newPassword" name="newPassword" placeholder="Enter your password" required>
+
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <p>Already have an account? <a href="index.html">Login here</a></p>
+  </div>
+
+  <script>
+    function registerUser(event) {
+      event.preventDefault();
+
+      const username = document.getElementById('newUsername').value;
+      const password = document.getElementById('newPassword').value;
+
+      if (username && password) {
+        // Save credentials to localStorage
+        localStorage.setItem('username', username);
+        localStorage.setItem('password', password);
+
+        alert('Account created successfully!');
+        window.location.href = 'index.html'; // Redirect to login page after account creation
+      }
+    }
+  </script>
+
+</body>
+</html>
